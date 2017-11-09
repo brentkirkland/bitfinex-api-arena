@@ -4,6 +4,13 @@ The purpose of this repo is to run through the bitfinex API and test that everyt
 
 I hope as a dual purpose, people will use the code to learn/use for their own tool that interacts with Bitfinex :)
 
+If you have any issues interacting with the API... PLEASE ping me / open an issue. I would love to help you out!
+
+## Structure
+- v1		# v1 files of API
+- v2		# v2 files of API
+- config 	# config files
+
 ## Todo:
 - v1
 - v2
