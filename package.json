@@ -1,0 +1,23 @@
+{
+  "name": "bitfinex-api-arena",
+  "version": "0.0.1",
+  "description": "Bitfinex API in action",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brentkirkland/bitfinex-api-arena.git"
+  },
+  "keywords": [
+    "bitfinex"
+  ],
+  "author": "Brent Kirkland",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/brentkirkland/bitfinex-api-arena/issues"
+  },
+  "homepage": "https://github.com/brentkirkland/bitfinex-api-arena#readme",
+  "dependencies": {
+    "async": "^2.6.0",
+    "node-fetch": "^1.7.3",
+    "request": "^2.83.0"
+  }
+}

@@ -1,0 +1,1 @@
+export const v1Url = 'https://api.bitfinex.com/v1'
