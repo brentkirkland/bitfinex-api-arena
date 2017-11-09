@@ -6,11 +6,6 @@ I hope as a dual purpose, people will use the code to learn/use for their own to
 
 If you have any issues interacting with the API... PLEASE ping me / open an issue. I would love to help you out!
 
-## Structure
-- v1		# v1 files of API
-- v2		# v2 files of API
-- config 	# config files
-
 ## Todo:
 - v1
 - v2
