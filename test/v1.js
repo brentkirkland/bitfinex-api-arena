@@ -21,7 +21,9 @@ const {
   accountinfo,
   accountfees,
   summary,
-  deposit
+  deposit,
+  keypermissions,
+  margininformation
  } = require('../v1')
 
 const symbol = 'btcusd'
@@ -122,6 +124,23 @@ describe('v1', () => {
 
   it('deposit: deposit returns an object', (done) => {
     deposit(baseUrl, apiKey, apiSecretKey, 'exchange', 'bitcoin', log)
+    .then(res => {
+      assert.equal(typeof res, 'object', 'response is an object')
+      assert.equal(!('message' in res), true, 'error message')
+      done()
+    })
+  }).timeout(7000)
+
+  it('keypermissions: keypermissions returns an object', (done) => {
+    keypermissions(baseUrl, apiKey, apiSecretKey, log)
+    .then(res => {
+      assert.equal(typeof res, 'object', 'response is an object')
+      assert.equal(!('message' in res), true, 'error message')
+      done()
+    })
+  }).timeout(7000)
+  it('margininformation: margininformation returns an object', (done) => {
+    margininformation(baseUrl, apiKey, apiSecretKey, log)
     .then(res => {
       assert.equal(typeof res, 'object', 'response is an object')
       assert.equal(!('message' in res), true, 'error message')

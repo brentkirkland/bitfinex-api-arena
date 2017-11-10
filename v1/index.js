@@ -14,6 +14,8 @@ const { accountinfo } = require('./accountinfo')
 const { accountfees } = require('./accountfees')
 const { summary } = require('./summary')
 const { deposit } = require('./deposit')
+const { keypermissions } = require('./keypermissions')
+const { margininformation } = require('./margininformation')
 
 module.exports = {
   ticker,
@@ -26,5 +28,7 @@ module.exports = {
   accountinfo,
   accountfees,
   summary,
-  deposit
+  deposit,
+  keypermissions,
+  margininformation
 }
