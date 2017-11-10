@@ -9,5 +9,5 @@ const { auth } = require('../utils/auth')
 exports.margininformation = (baseUrl, apiKey, apiSecret, log = false) => {
   const url = '/v1/margin_infos'
   const authData = auth(baseUrl, url, apiKey, apiSecret)
-  return fetch(authData.url, 'SUMMARY', log, authData.options)
+  return fetch(authData.url, 'MARGIN INFOS', log, authData.options)
 }

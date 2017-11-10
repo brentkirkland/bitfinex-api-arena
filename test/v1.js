@@ -29,7 +29,7 @@ const {
 const symbol = 'btcusd'
 const currency = 'usd'
 
-const log = true
+const log = false
 
 describe('v1', () => {
   it('ticker: ticker returns an object', (done) => {
