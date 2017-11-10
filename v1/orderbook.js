@@ -3,18 +3,18 @@
 
 'use strict'
 
-const { v1Url } = require('../config.js')
-
 const fetch = require('node-fetch')
-const request = require('request')
 
-async function orderbook (symbol) {
+async function orderbook (baseUrl, symbol, log = false) {
   try {
-    const url = v1Url + `/book/${symbol}`
-    const req = await fetch(url).then(res => res.json())
-    console.log('ORDER BOOK ----------')
-    console.log(req)
-    console.log('---------------------')
+    const url = baseUrl + `/v1/book/${symbol}`
+    const data = await fetch(url).then(res => res.json())
+    if (log) {
+      console.log('ORDER BOOK ----------')
+      console.log(data)
+      console.log('---------------------')
+    }
+    return data
   } catch (e) {
     throw Error('Error getting order book')
   }

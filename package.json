@@ -1,15 +1,20 @@
 {
   "name": "bitfinex-api-arena",
   "version": "0.0.1",
+  "private": true,
   "description": "Bitfinex API in action",
+  "author": {
+    "name": "Brent Kirkland",
+    "email": "brent@bitfinex.com"
+  },
+  "keywords": [
+    "bitfinex",
+    "bfx"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/brentkirkland/bitfinex-api-arena.git"
   },
-  "keywords": [
-    "bitfinex"
-  ],
-  "author": "Brent Kirkland",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/brentkirkland/bitfinex-api-arena/issues"
@@ -17,7 +22,24 @@
   "homepage": "https://github.com/brentkirkland/bitfinex-api-arena#readme",
   "dependencies": {
     "async": "^2.6.0",
+    "btoa": "^1.1.2",
+    "crypto": "^1.0.1",
+    "expect": "^21.2.1",
     "node-fetch": "^1.7.3",
     "request": "^2.83.0"
+  },
+  "devDependencies": {
+    "expect.js": "^0.3.1",
+    "mocha": "^3.4.2",
+    "standard": "^10.0.3"
+  },
+  "engine": {
+    "node": ">=8.0"
+  },
+  "scripts": {
+    "test": "npm run lint && npm run unit",
+    "unit": "mocha",
+    "lint": "standard",
+    "lintFix": "standard --fix"
   }
 }

@@ -3,18 +3,18 @@
 
 'use strict'
 
-const { v1Url } = require('../config.js')
-
 const fetch = require('node-fetch')
-const request = require('request')
 
-async function fundingbook (currency) {
+async function fundingbook (baseUrl, currency, log = false) {
   try {
-    const url = v1Url + `/lendbook/${currency}`
-    const req = await fetch(url).then(res => res.json())
-    console.log('FUNDING BOOK --------')
-    console.log(req)
-    console.log('---------------------')
+    const url = baseUrl + `/v1/lendbook/${currency}`
+    const data = await fetch(url).then(res => res.json())
+    if (log) {
+      console.log('FUNDING BOOK --------')
+      console.log(data)
+      console.log('---------------------')
+    }
+    return data
   } catch (e) {
     throw Error('Error getting funding book')
   }

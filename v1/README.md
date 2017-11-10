@@ -1,11 +1,6 @@
 A list of notes:
 
-- Javascript Client? A little confusing
-- stats javascript can be cleaned up
-- fundingbook should take javascript examples
-- orderbook could use some work
-- lends could use some work
-- symbols could update
+- Cleaned public
 
 # Todo:
 
@@ -16,3 +11,8 @@ A list of notes:
  - [ticker](https://docs.bitfinex.com/v1/reference#rest-public-ticker)
  - [stats](https://docs.bitfinex.com/v1/reference#rest-public-stats)
  - [funding book](https://docs.bitfinex.com/v1/reference#rest-public-fundingbook)
+ - [order book](https://docs.bitfinex.com/v1/reference#rest-public-orderbook)
+ - [trades](https://docs.bitfinex.com/v1/reference#rest-public-trades)
+ - [lends](https://docs.bitfinex.com/v1/reference#rest-public-lends)
+ - [symbols](https://docs.bitfinex.com/v1/reference#rest-public-symbols)
+ - [symbol deatils](https://docs.bitfinex.com/v1/reference#rest-public-symbol-details)

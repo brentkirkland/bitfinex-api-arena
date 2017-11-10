@@ -3,18 +3,18 @@
 
 'use strict'
 
-const { v1Url } = require('../config.js')
-
 const fetch = require('node-fetch')
-const request = require('request')
 
-async function symbols () {
+async function symbols (baseUrl, log = false) {
   try {
-    const url = v1Url + `/symbols`
-    const req = await fetch(url).then(res => res.json())
-    console.log('SYMBOLS -------------')
-    console.log(req)
-    console.log('---------------------')
+    const url = baseUrl + `/v1/symbols`
+    const data = await fetch(url).then(res => res.json())
+    if (log) {
+      console.log('SYMBOLS -------------')
+      console.log(data)
+      console.log('---------------------')
+    }
+    return data
   } catch (e) {
     throw Error('Error getting symbols')
   }

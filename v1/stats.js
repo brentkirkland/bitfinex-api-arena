@@ -3,18 +3,18 @@
 
 'use strict'
 
-const { v1Url } = require('../config.js')
-
 const fetch = require('node-fetch')
-const request = require('request')
 
-async function stats (symbol) {
+async function stats (baseUrl, symbol, log = false) {
   try {
-    const url = v1Url + `/stats/${symbol}`
-    const req = await fetch(url).then(res => res.json())
-    console.log('STATS ---------------')
-    console.log(req)
-    console.log('---------------------')
+    const url = baseUrl + `/v1/stats/${symbol}`
+    const data = await fetch(url).then(res => res.json())
+    if (log) {
+      console.log('STATS ---------------')
+      console.log(data)
+      console.log('---------------------')
+    }
+    return data
   } catch (e) {
     throw Error('Error getting stats')
   }
