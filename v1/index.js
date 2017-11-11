@@ -16,6 +16,7 @@ const { summary } = require('./summary')
 const { deposit } = require('./deposit')
 const { keypermissions } = require('./keypermissions')
 const { margininformation } = require('./margininformation')
+const { walletbalances } = require('./walletbalances')
 
 module.exports = {
   ticker,
@@ -30,5 +31,6 @@ module.exports = {
   summary,
   deposit,
   keypermissions,
-  margininformation
+  margininformation,
+  walletbalances
 }

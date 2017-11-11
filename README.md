@@ -14,4 +14,5 @@ If you have any issues interacting with the API... PLEASE ping me / open an issu
 - python stuff
 - tests
 - format in a way that makes the most sense for someone new
-- TEST new_deposit via bitfinex-api-node on production, update all docss
+- TEST new_deposit via bitfinex-api-node on production, update all docs
+- TEST wallet_balances on production!

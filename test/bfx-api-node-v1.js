@@ -129,4 +129,26 @@ describe('bfx-api-node', () => {
       done()
     })
   }).timeout(7000)
+
+  // test balances with public
+  // it('wallet_balances: margin_infos returns an object', (done) => {
+  //   bfxRest.wallet_balances((err, res) => {
+  //     if (err) console.log(err)
+  //     console.log(res)
+  //     assert.equal(typeof res, 'object', 'response is an object')
+  //     assert.equal(!('message' in res), true, 'error message')
+  //     done()
+  //   })
+  // }).timeout(7000)
+  it('transfer: transfer returns an object', (done) => {
+    bfxRest.transfer(1.0, 'USD', 'exchange', 'trading', (err, res) => {
+      if (err) console.log(err)
+      console.log(res)
+      assert.equal(typeof res, 'object', 'response is an object')
+      assert.equal(!('message' in res), true, 'error message')
+      done()
+    })
+  }).timeout(7000)
+
+  // skipping withdraw
 })

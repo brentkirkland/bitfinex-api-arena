@@ -23,7 +23,8 @@ const {
   summary,
   deposit,
   keypermissions,
-  margininformation
+  margininformation,
+  walletbalances
  } = require('../v1')
 
 const symbol = 'btcusd'
@@ -144,6 +145,15 @@ describe('v1', () => {
     .then(res => {
       assert.equal(typeof res, 'object', 'response is an object')
       assert.equal(!('message' in res), true, 'error message')
+      done()
+    })
+  }).timeout(7000)
+  it('walletbalances: walletbalances returns an object', (done) => {
+    walletbalances(baseUrl, apiKey, apiSecretKey, log)
+    .then(res => {
+      console.log(res)
+      // assert.equal(typeof res, 'object', 'response is an object')
+      // assert.equal(!('message' in res), true, 'error message')
       done()
     })
   }).timeout(7000)
